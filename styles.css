@@ -332,4 +332,5 @@ button:focus-visible,a:focus-visible{outline-color:#e3aa00}
   .skill-bubbles a:nth-child(1),.skill-bubbles a:nth-child(5){transform:translateY(9px)}
   .skill-bubbles a:nth-child(3),.skill-bubbles a:nth-child(7){transform:translateY(-7px)}
 }
+.source-access-note{display:inline-block;margin-left:.3em}
 
