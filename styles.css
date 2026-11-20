@@ -273,3 +273,12 @@ button:focus-visible,a:focus-visible{outline-color:#e3aa00}
 .case-grid .case-card:hover::before,.case-grid .case-card:focus-within::before{opacity:1}
 .case-grid .case-card:hover .tag,.case-grid .case-card:focus-within .tag{background:#ffffffa8;color:#23516d}
 #home,#work,#work-filters,#work-cards,#about,#skills,#certificates,#contact,#contact-links{scroll-margin-top:88px}
+
+.certificate-gallery .certificate-thumb{display:block;width:100%;padding:0;border:0;border-radius:8px;background:transparent;cursor:zoom-in}
+.certificate-gallery .certificate-thumb img{display:block;width:100%}
+.certificate-gallery .certificate-thumb:focus-visible{outline:3px solid #1e88e5;outline-offset:4px}
+.certificate-dialog{width:min(94vw,1100px);max-width:94vw;max-height:94vh;padding:52px 18px 18px;overflow:auto;text-align:center;background:#f6fbff}
+.certificate-dialog::backdrop{background:#102a3bd9}
+.certificate-dialog img{display:block;max-width:100%;max-height:calc(94vh - 78px);width:auto;height:auto;margin:auto;object-fit:contain}
+.certificate-close{position:absolute;top:8px;right:12px;border:0;background:#fff;color:#173a54;border-radius:50%;width:40px;height:40px;font-size:1.8rem;line-height:1;cursor:pointer}
+.certificate-close:focus-visible{outline:3px solid #1e88e5;outline-offset:2px}

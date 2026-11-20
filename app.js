@@ -34,6 +34,17 @@ document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
 
 function renderTrend(values){const weeks=["9/26–10/2","10/3–10/9","10/10–10/16","10/17–10/23","10/24–10/30","10/31–11/6","11/7–11/13"];const bars=values.map((v,i)=>{const x=73+i*76;const h=v*1.9;const y=184-h;return `<rect x="${x}" y="${y}" width="42" height="${h}" rx="3" fill="#287c78"><title>第 ${i+1} 週：${v}%</title></rect><text x="${x+21}" y="${y-8}" text-anchor="middle" font-size="12" fill="#173d42">${v}%</text><text x="${x+21}" y="207" text-anchor="middle" font-size="11" fill="#173d42">${weeks[i]}</text>`}).join('');return `<div class="trend"><h3>每週名單中，目標產業占多少？</h3><p>2026/9/26–11/13 最近七個完整週｜目標產業名單 ÷ 當週總名單</p><svg viewBox="0 0 620 220" role="img" aria-label="七週目標產業名單占比長條圖，依序為 ${values.join('%、')}%"><line x1="54" y1="184" x2="610" y2="184" stroke="#9db9b6"/>${bars}</svg><p>目標產業占比能協助確認目前策略吸引到的客群是否符合目標，並作為後續調整依據。</p></div>`}
 
+const certificateDialog=document.querySelector('#certificate-dialog');
+const certificateFull=document.querySelector('#certificate-full');
+document.querySelectorAll('.certificate-thumb').forEach(button=>button.addEventListener('click',()=>{
+  const thumbnail=button.querySelector('img');
+  certificateFull.src=thumbnail.src.replace(/sz=w\d+/, 'sz=w2400');
+  certificateFull.alt=thumbnail.alt;
+  certificateDialog.showModal();
+}));
+document.querySelector('.certificate-close').addEventListener('click',()=>certificateDialog.close());
+certificateDialog.addEventListener('click',event=>{if(event.target===certificateDialog)certificateDialog.close()});
+
 
 
 
