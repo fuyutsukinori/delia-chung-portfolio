@@ -334,4 +334,7 @@ button:focus-visible,a:focus-visible{outline-color:#e3aa00}
 }
 .source-access-note{display:inline-block;margin-left:.3em}
 .deck .panel-top{color:#ffca28}
+.case-sections h3{display:flex;align-items:center;gap:9px}
+.case-section-icon{width:27px;height:27px;flex:none;display:inline-grid;place-items:center;border-radius:8px;background:#e3f2fd;color:#126fbc}
+.case-section-icon svg{width:17px;height:17px}
 
